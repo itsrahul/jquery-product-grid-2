@@ -1,0 +1,81 @@
+* {
+  font-family: Tahoma;
+  font-size: 13px;
+  /* border: 1px solid black; */
+}
+
+header {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+}
+
+a {
+  align-self: center;
+  padding: 20px;
+}
+a#logo {
+  font-size: 17px;
+  border-right: 5px solid red;
+  width: 20%;
+  text-align: right;
+}
+a#cart {
+  width: 20%;
+  text-align: right;
+  padding: unset;
+}
+#filterhead {
+  font-size: 17px;
+  padding: 5px;
+}
+
+div#head {
+  padding: 20px;
+  text-align: center;
+  font-size: 17px;
+}
+
+footer {
+  width: 50%;
+  height: 40px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 20px;
+}
+
+footer *{
+  border: 1px solid burlywood;
+}
+
+.highlight {
+  background: rgb(131, 226, 131);
+}
+
+.card {
+  border: 1px solid rgb(192, 180, 180);
+  padding: 15px;
+  text-align: center;
+  width: 200px;
+  height: 150px;
+  margin: 10px;
+  margin-left: 90px;
+}
+.row{
+  display: flex;
+}
+
+.column {
+  border: 1px solid burlywood;
+  margin: 10px;
+}
+
+.column.side {
+  width: 15%;
+}
+
+.column.main {
+  width: 65%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}

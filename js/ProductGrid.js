@@ -12,6 +12,7 @@ export default class ProductGrid {
     this.filteredBrand = new Set();
     this.jsonUrl = options.jsonUrl;
     this.$mainContainer    = $(options.mainContainer);
+    this.$footerContainer  = $(options.footerContainer);
     this.$filterContainer  = this.$mainContainer.find($(options.filterContainer));
     this.$displayContainer = this.$mainContainer.find($(options.displayContainer));
     this.styleClassName    = options.styleClassName;
@@ -62,7 +63,7 @@ export default class ProductGrid {
     let pagewiseProducts = [];
     let count = 1;
 
-    $("footer").children().hide();
+    this.$footerContainer.children().detach();
     for(let index = 0; index < this.itemToDisplay.length; index += this.pageSize, count++)
     {
       pagewiseProducts.push(this.itemToDisplay.slice(index, index+this.pageSize));
@@ -72,8 +73,9 @@ export default class ProductGrid {
         $(event.target).addClass("highlight").siblings().removeClass("highlight");
       })
       
-      $("footer").append($pageIndex);
+      this.$footerContainer.append($pageIndex);
     }
+    this.$footerContainer.children().first().addClass("highlight");
 
     Display.show(pagewiseProducts[0], this.$displayContainer, this.styleClassName);
 

@@ -26,12 +26,16 @@ export default class ProductGrid {
       url: this.jsonUrl,
       type: "get",
       dataType: "json",
+      error: function(){
+        window.alert("Page not found #404!!!!!!!!");
+      },
       success: (data) => {
         this.data = data;
         this.makePagination();
         this.createProducts();
         this.createFilterArrays();
         this.filterItems();
+        console.log('document.URL :', document.URL);
       }
     });
   }

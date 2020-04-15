@@ -7,7 +7,7 @@ $(document).ready(function () {
     mainContainer: "#display",
     filterContainer: "#filterhead",
     displayContainer: "#result",
-    styleClassName: "card",
+    styleClassName:   "card",
   }
   let shop = new ProductGrid(options);
   shop.init();
